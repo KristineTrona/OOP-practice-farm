@@ -1,6 +1,6 @@
 const {Farm} = require('./index');
-const {Wheat} = require('./crops');
-const {Sugarcane} = require('./crops');
+const {Wheat, Crop, Sugarcane} = require('./crops');
+
 
 test('A new Farm can be created', () => {
   const farm = new Farm()
@@ -30,5 +30,10 @@ test('The Sugarcane class can calculate a yield', () => {
   
   test('The Sugarcane class calculates the proper yield', () => {
     const sugarcane = new Sugarcane(100)
-    expect(sugarcane.getYieldInKg()).toBeCloseTo(453.38, 2)
+    expect(sugarcane.getYieldInKg()).toBeCloseTo(453.39, 2)
+  })
+
+  test('A crop can store its area size', () => {
+    const crop = new Crop(12345)
+    expect(crop.acres).toBe(12345)
   })
