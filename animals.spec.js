@@ -1,4 +1,4 @@
-const {Animal, Pig, Horse, Cow} = require('./animals')
+const {Pig, Horse, Cow} = require('./animals')
 
 test('Pig of 0 days calculates proper weight', () => {
   const pig = new Pig(0)
