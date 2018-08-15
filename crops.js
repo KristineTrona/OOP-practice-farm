@@ -34,4 +34,3 @@ class Wheat extends Crop {
   }
 
   module.exports = { Crop, Wheat, Sugarcane }
-  
